@@ -24,18 +24,24 @@ am reusit sa afisez output-ul comenzilor de manevrare a sistemului:
 ->create-user
 
 i) cazul in care utilizatorul nu furnizeaza username (args.length=1)
+
 ii) cazul in care utilizatorul nu furnizeaza parola (args.length=2)
+
 iii) daca utilizatorul furnizeaza datele necesare, verific mai intai existenta
 utilizatorului in fisierul "users.csv" si daca nu exista, il adaug cu succes
 
 ->create-question
 i) cazurile in care utilizatorul nu furnizeaza niciun username sau eventual nu
 furnizeaza parola pentru username (args.length=1|2)
+
 ii) cazul in care nu exista user-ul respectiv sau parola este gresita pentru
 user-functia checkUserCredentialsCSV()
+
 iii) intrebarea nu primeste niciun raspuns (args.length=5)
+
 iv) intrebarea are doar un raspuns/nu are text sau raspunsul 1 sau 2 nu are
 descriere/flag => getSystemResponseForCreateQuestionMissingComponents
+
 v) daca nu are loc iv), verific ii) si existenta textului intrebarii; construiesc
 vectorul de raspunsuri unde fiecare element este format din textul intrebarii si
 valoarea de adevar; in caz ca nu exista, campul respectiv ramane null. Verific
